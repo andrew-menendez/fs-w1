@@ -99,11 +99,14 @@ function paramify(object){
     str="";
     myObj=object;
     params=[]
-  
     
+
     for (x in myObj){
+        if (myObj.hasOwnProperty(x)){
         params.push(x)
+        }
     }
+   
     sortedP=params.sort()
     
     for (i in sortedP){
@@ -113,6 +116,7 @@ function paramify(object){
     if (str.slice(-1)=="&") {
         str=str.substring(0, str.length - 1);
     }
+    
     return str
 
 }

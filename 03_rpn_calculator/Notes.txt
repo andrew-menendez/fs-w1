@@ -1,0 +1,1 @@
+Notes - I wasn't able to get the syntax of the try/ except. I got around it by using if/then statements to throw the exception. 

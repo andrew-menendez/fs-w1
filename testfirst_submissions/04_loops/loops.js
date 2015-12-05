@@ -91,6 +91,32 @@ function join(array,delim){
         str=str.substring(0, str.length - 1);
     }
     return str
+};
+
+/// Paramify
+
+function paramify(object){
+    str="";
+    myObj=object;
+    params=[]
+  
+    
+    for (x in myObj){
+        params.push(x)
+    }
+    sortedP=params.sort()
+    
+    for (i in sortedP){
+        console.log(sortedP[i])
+        str=str.concat(sortedP[i],"=",myObj[sortedP[i]],"&")
+    }
+    if (str.slice(-1)=="&") {
+        str=str.substring(0, str.length - 1);
+    }
+    return str
+
 }
 
-// I need help with the non-indexed properties!
+
+
+

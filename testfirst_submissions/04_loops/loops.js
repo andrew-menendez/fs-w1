@@ -76,11 +76,13 @@ return result
 
 function join(array,delim){
     str="";
-    for (x in array){
+    myArray=array
+    len=array.length
+    for (i=0;i<len;i++){
         if (typeof delim !== 'undefined') {
-            str=str.concat(array[x],delim)
+            str=str.concat(myArray[i],delim)
         } else {
-            str=str.concat(array[x])
+            str=str.concat(myArray[i])
         }
         
         
@@ -90,3 +92,5 @@ function join(array,delim){
     }
     return str
 }
+
+// I need help with the non-indexed properties!

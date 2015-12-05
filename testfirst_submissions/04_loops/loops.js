@@ -73,3 +73,20 @@ return result
 
 /// End Grid Gen
 
+
+function join(array,delim){
+    str="";
+    for (x in array){
+        if (typeof delim !== 'undefined') {
+            str=str.concat(array[x],delim)
+        } else {
+            str=str.concat(array[x])
+        }
+        
+        
+    }
+    if (str.slice(-1)==delim) {
+        str=str.substring(0, str.length - 1);
+    }
+    return str
+}
